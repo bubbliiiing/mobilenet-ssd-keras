@@ -57,8 +57,8 @@ if __name__ == "__main__":
                 steps_per_epoch=num_train//BATCH_SIZE/2,
                 validation_data=gen.generate(False),
                 validation_steps=num_val//BATCH_SIZE,
-                epochs=15, 
-                initial_epoch=10,
+                epochs=25, 
+                initial_epoch=0,
                 callbacks=[logging, checkpoint, reduce_lr, early_stopping])
 
     for i in range(81):
@@ -70,6 +70,6 @@ if __name__ == "__main__":
                 steps_per_epoch=num_train//BATCH_SIZE,
                 validation_data=gen.generate(False),
                 validation_steps=num_val//BATCH_SIZE,
-                epochs=100, 
-                initial_epoch=23,
+                epochs=50, 
+                initial_epoch=25,
                 callbacks=[logging, checkpoint, reduce_lr, early_stopping])
