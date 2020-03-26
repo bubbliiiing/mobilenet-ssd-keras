@@ -1,11 +1,20 @@
-# mobilenet-ssd-keras
-这是一个mobilenet-ssd-keras的源码，可以用于训练自己的模型。
+## Mobilenet-SSD：轻量级目标检测模型在Keras当中的实现
+---
 
-# 文件下载
+### 目录
+1. [所需环境 Environment](#所需环境)
+2. [文件下载 Download](#文件下载)
+3. [训练步骤 How2train](#训练步骤)
+4. [参考资料 Reference](#Reference)
+
+### 所需环境
+tensorflow-gpu==1.13.1  
+keras==2.1.5  
+### 文件下载
 训练所需的mobilenet_ssd_weights可以在百度云下载。  
 链接: https://pan.baidu.com/s/16zUKzO14W4C57rfvs-8TNg  
 提取码: n9py  
-# 训练步骤
+### 训练步骤
 1、本文使用VOC格式进行训练。  
 2、训练前将标签文件放在VOCdevkit文件夹下的VOC2007文件夹下的Annotation中。  
 3、训练前将图片文件放在VOCdevkit文件夹下的VOC2007文件夹下的JPEGImages中。  
