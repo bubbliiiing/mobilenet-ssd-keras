@@ -22,7 +22,7 @@ class MultiboxLoss(object):
         abs_loss = tf.abs(y_true - y_pred)
         sq_loss = 0.5 * (y_true - y_pred)**2
         l1_loss = tf.where(tf.less(abs_loss, 1.0), sq_loss, abs_loss - 0.5)
-        return tf.reduce_mean(l1_loss, -1)
+        return tf.reduce_sum(l1_loss, -1)
 
     def _softmax_loss(self, y_true, y_pred):
         y_pred = tf.maximum(tf.minimum(y_pred, 1 - 1e-15), 1e-15)
