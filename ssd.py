@@ -56,15 +56,8 @@ class SSD(object):
 
         # 载入模型，如果原来的模型里已经包括了模型结构则直接载入。
         # 否则先构建模型再载入
-        try:
-            self.ssd_model = load_model(model_path, compile=False)
-        except:
-            self.ssd_model = ssd.SSD300(self.model_image_size,self.num_classes)
-            self.ssd_model.load_weights(self.model_path,by_name=True)
-        else:
-            assert self.ssd_model.layers[-1].output_shape[-1] == \
-                num_anchors/len(self.ssd_model.output) * (self.num_classes + 5), \
-                'Mismatch between model and given anchor and class sizes'
+        self.ssd_model = ssd.SSD300(self.model_image_size,self.num_classes)
+        self.ssd_model.load_weights(self.model_path,by_name=True)
 
         self.ssd_model.summary()
         print('{} model, anchors, and classes loaded.'.format(model_path))
