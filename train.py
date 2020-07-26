@@ -68,7 +68,7 @@ if __name__ == "__main__":
         model.compile(optimizer=Adam(lr=5e-4, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0),
                         loss=MultiboxLoss(NUM_CLASSES, neg_pos_ratio=3.0).compute_loss)
         model.fit_generator(gen.generate(True), 
-                steps_per_epoch=num_train//BATCH_SIZE/2,
+                steps_per_epoch=num_train//BATCH_SIZE,
                 validation_data=gen.generate(False),
                 validation_steps=num_val//BATCH_SIZE,
                 epochs=25, 
