@@ -65,7 +65,7 @@ if __name__ == "__main__":
     for i in range(81):
         model.layers[i].trainable = False
     if True:
-        model.compile(optimizer=Adam(lr=1e-4, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0),
+        model.compile(optimizer=Adam(lr=5e-4, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0),
                         loss=MultiboxLoss(NUM_CLASSES, neg_pos_ratio=3.0).compute_loss)
         model.fit_generator(gen.generate(True), 
                 steps_per_epoch=num_train//BATCH_SIZE/2,
@@ -78,7 +78,7 @@ if __name__ == "__main__":
     for i in range(81):
         model.layers[i].trainable = True
     if True:
-        model.compile(optimizer=Adam(lr=1e-5, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0),loss=MultiboxLoss(NUM_CLASSES, neg_pos_ratio=3.0).compute_loss)
+        model.compile(optimizer=Adam(lr=1e-4, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0),loss=MultiboxLoss(NUM_CLASSES, neg_pos_ratio=3.0).compute_loss)
         # model.compile(optimizer=SGD(lr=1e-4,momentum=0.9,decay=5e-4),loss=MultiboxLoss(NUM_CLASSES, neg_pos_ratio=3.0).compute_loss)
         model.fit_generator(gen.generate(True), 
                 steps_per_epoch=num_train//BATCH_SIZE,
