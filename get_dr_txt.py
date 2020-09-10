@@ -3,6 +3,7 @@ from ssd import SSD
 from PIL import Image
 from keras.applications.imagenet_utils import preprocess_input
 from utils.utils import BBoxUtility,letterbox_image,ssd_correct_boxes
+from tqdm import tqdm
 import numpy as np
 import os
 class mAP_SSD(SSD):
@@ -10,7 +11,7 @@ class mAP_SSD(SSD):
     #   检测图片
     #---------------------------------------------------#
     def detect_image(self,image_id,image):
-        self.confidence = 0.05
+        self.confidence = 0.001
         f = open("./input/detection-results/"+image_id+".txt","w") 
         image_shape = np.array(np.shape(image)[0:2])
         crop_img,x_offset,y_offset = letterbox_image(image, (self.model_image_size[0],self.model_image_size[1]))
@@ -61,12 +62,10 @@ if not os.path.exists("./input/images-optional"):
     os.makedirs("./input/images-optional")
 
 
-for image_id in image_ids:
+for image_id in tqdm(image_ids):
     image_path = "./VOCdevkit/VOC2007/JPEGImages/"+image_id+".jpg"
     image = Image.open(image_path)
-    image.save("./input/images-optional/"+image_id+".jpg")
+    # image.save("./input/images-optional/"+image_id+".jpg")
     ssd.detect_image(image_id,image)
-    print(image_id," done!")
-    
 
 print("Conversion completed!")
