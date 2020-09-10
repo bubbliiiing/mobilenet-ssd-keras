@@ -79,11 +79,11 @@ class SSD(object):
     #---------------------------------------------------#
     def detect_image(self, image):
         image_shape = np.array(np.shape(image)[0:2])
-        crop_img,x_offset,y_offset = letterbox_image(image, (300,300))
+        crop_img,x_offset,y_offset = letterbox_image(image, (self.model_image_size[0],self.model_image_size[1]))
         photo = np.array(crop_img,dtype = np.float64)
 
         # 图片预处理，归一化
-        photo = preprocess_input(np.reshape(photo,[1,300,300,3]))
+        photo = preprocess_input(np.reshape(photo,[1,self.model_image_size[0],self.model_image_size[1],3]))
         preds = self.ssd_model.predict(photo)
 
         # 将预测结果进行解码
