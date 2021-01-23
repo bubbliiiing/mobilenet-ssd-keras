@@ -12,7 +12,7 @@
 ### 性能情况
 | 训练数据集 | 权值文件名称 | 测试数据集 | 输入图片大小 | mAP 0.5:0.95 | mAP 0.5 |
 | :-----: | :-----: | :------: | :------: | :------: | :-----: |
-| VOC07+12 | [mobilenet_ssd_weights.h5](https://github.com/bubbliiiing/mobilenet-ssd-keras/releases/download/v1.0/mobilenet_ssd_weights.h5) | VOC-Test07 | 300x300| - | 65.12
+| VOC07+12 | [mobilenet_ssd_weights.h5](https://github.com/bubbliiiing/mobilenet-ssd-keras/releases/download/v1.0/mobilenet_ssd_weights.h5) | VOC-Test07 | 300x300| - | 68.14
 
 ### 论文版本的Mobilenet-SSD
 原版的Mobilenet-ssd不利用38x38的特征层进行回归预测和分类预测，于是我重新弄了一个库，地址如下：   
