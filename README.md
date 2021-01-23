@@ -23,9 +23,9 @@ tensorflow-gpu==1.13.1
 keras==2.1.5  
 
 ### 文件下载
-训练所需的mobilenet_ssd_weights可以在百度云下载。    
-链接: https://pan.baidu.com/s/1Ps2pNRB-DFpbX65mIy7kjw     
-提取码: rxnb   
+训练所需的mobilenet_ssd_weights可以在百度云下载。     
+链接: https://pan.baidu.com/s/1um_yB5CrlpWcZQRAQYSzow    
+提取码: nvsd 
 
 ### 预测步骤
 #### 1、使用预训练权重
