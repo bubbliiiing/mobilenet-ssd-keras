@@ -96,7 +96,7 @@ if __name__ == "__main__":
     #   Epoch总训练世代
     #   提示OOM或者显存不足请调小Batch_size
     #------------------------------------------------------#
-    for i in range(21):
+    for i in range(80):
         model.layers[i].trainable = False
     if True:
         Init_epoch = 0
@@ -116,7 +116,7 @@ if __name__ == "__main__":
                 initial_epoch=Init_epoch,
                 callbacks=[logging, checkpoint, reduce_lr, early_stopping])
 
-    for i in range(21):
+    for i in range(80):
         model.layers[i].trainable = True
     if True:
         Freeze_epoch = 50
