@@ -24,7 +24,7 @@ class SSD(object):
         "model_path"        : 'model_data/mobilenet_ssd_weights.h5',
         "classes_path"      : 'model_data/voc_classes.txt',
         "input_shape"       : (300, 300, 3),
-        "confidence"        : 0.5,
+        "confidence"        : 0.4,
         "nms_iou"           : 0.45,
         'anchors_size'      : [30,60,111,162,213,264,315]
     }
