@@ -1,15 +1,7 @@
 import keras.backend as K
-from keras.layers import Activation
-from keras.layers import Conv2D
-from keras.layers import Dense
-from keras.layers import Flatten,Add,ZeroPadding2D
-from keras.layers import GlobalAveragePooling2D,DepthwiseConv2D,BatchNormalization
-from keras.layers import Input
-from keras.layers import MaxPooling2D
-from keras.layers import merge, concatenate
-from keras.layers import Reshape
-from keras.layers import ZeroPadding2D
-from keras.models import Model
+from keras.layers import (Activation, BatchNormalization, Conv2D,
+                          DepthwiseConv2D, ZeroPadding2D)
+
 
 def _depthwise_conv_block(inputs, pointwise_conv_filters,
                           depth_multiplier=1, strides=(1, 1), block_id=1):

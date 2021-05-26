@@ -1,12 +1,10 @@
-import keras.backend as K
-#from keras.layers import AtrousConvolution2D
-from keras.layers import (Activation, Conv2D, Dense, Flatten,
-                          GlobalAveragePooling2D, Input, MaxPooling2D, Reshape,
-                          ZeroPadding2D, concatenate, merge)
+from keras.layers import (Activation, Conv2D, Flatten, Input, Reshape,
+                          concatenate)
 from keras.models import Model
 
 from nets.mobilenet import mobilenet
 from nets.ssd_layers import Normalize, PriorBox
+
 
 def SSD300(input_shape, num_classes=21, anchors_size=[30,60,111,162,213,264,315]):
     #---------------------------------#

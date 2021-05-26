@@ -2,6 +2,7 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image
 
+
 def letterbox_image(image, size):
     iw, ih = image.size
     w, h = size
