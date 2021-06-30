@@ -44,7 +44,7 @@ VOC2007测试集
 ```python
 img/street.jpg
 ```
-2. 利用video.py可进行摄像头检测。
+2. 在predict.py里面进行设置可以进行fps测试和video视频检测。
 
 ### b、使用自己训练的权重
 1. 按照训练步骤训练。  
@@ -61,7 +61,7 @@ _defaults = {
 ```python
 img/street.jpg
 ```
-4. 利用video.py可进行摄像头检测。  
+4. 在predict.py里面进行设置可以进行fps测试和video视频检测。  
 
 ## 训练步骤
 1. 本文使用VOC格式进行训练。  
