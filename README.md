@@ -28,8 +28,8 @@ keras==2.1.5
 
 ## 文件下载
 训练所需的mobilenet_ssd_weights可以在百度云下载。     
-链接: https://pan.baidu.com/s/1um_yB5CrlpWcZQRAQYSzow    
-提取码: nvsd 
+链接: https://pan.baidu.com/s/1CQv9e8dNMrclO7g6XdHiKg   
+提取码: 6mg2  
 
 VOC数据集下载地址如下，里面已经包括了训练集、测试集、验证集（与测试集一样），无需再次划分：  
 链接: https://pan.baidu.com/s/1YuBbBKxm2FGgTU5OfaeC5A    
