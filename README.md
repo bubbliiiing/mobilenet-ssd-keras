@@ -30,7 +30,7 @@ tensorflow-gpu==1.13.1
 keras==2.1.5  
 
 ## 文件下载
-训练所需的mobilenet_ssd_weights可以在百度云下载。     
+训练所需的mobilenet_ssd_weights和主干的权值可以在百度云下载。     
 链接: https://pan.baidu.com/s/1CQv9e8dNMrclO7g6XdHiKg   
 提取码: 6mg2  
 
