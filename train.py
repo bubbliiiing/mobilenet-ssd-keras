@@ -256,8 +256,8 @@ if __name__ == "__main__":
         #---------------------------------------#
         lr_scheduler_func = get_lr_scheduler(lr_decay_type, Init_lr_fit, Min_lr_fit, UnFreeze_Epoch)
 
-        epoch_step          = 5
-        epoch_step_val      =5
+        epoch_step      = num_train // batch_size
+        epoch_step_val  = num_val // batch_size
 
         if epoch_step == 0 or epoch_step_val == 0:
             raise ValueError('数据集过小，无法进行训练，请扩充数据集。')
